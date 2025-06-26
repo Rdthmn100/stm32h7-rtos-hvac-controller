@@ -5,19 +5,21 @@ An embedded HVAC control system using the STM32H743IXH6 and FreeRTOS. This proje
 ## Features
 - Real-time multitasking with FreeRTOS
 - ADC-based temperature monitoring
+- I2C based pressure monitoring
 - GPIO-driven actuator logic (cooling/heating)
 - UART logging via DMA
 - Watchdog and fault detection framework
 
 ## Hardware
-- STM32H743IXH6 (NUCLEO-H743ZI or custom board)
-- Optional: Temp sensor (NTC, TMP36) on ADC
-- USB/UART for debug
+- STM32H743IXH6
+- Temperature sensors
+- Pressure sensors
+- USB/UART for debugging and user interface to display data
 
 ## Tasks
 | Task            | Function                            |
 |----------------|-------------------------------------|
-| SensorTask      | Read and filter temperature data     |
+| SensorTask      | Read and filter temperature/pressure data     |
 | ControlTask     | Manage heating/cooling logic         |
 | LoggerTask      | Output system state to UART          |
 | FaultMonitor    | Detect and report WDT or sensor faults |
