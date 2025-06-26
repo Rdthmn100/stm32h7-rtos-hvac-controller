@@ -1,0 +1,21 @@
+# STM32CubeIDE output
+*.ioc
+*.launch
+*.log
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.d
+*.lst
+*.su
+
+# Build folders
+/Debug/
+/Release/
+/build/
+/out/
+
+# CubeMX generated backup
+Backup*/ 
